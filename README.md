@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-product-preview-card-component-using-css-grid-and-flesbox-vBa8WtKxb8)
+- Live Site URL: [Add live site URL here](https://ahmed-adjei1.github.io/Product-Preview-Card-Component/)
 
 ## My process
 
