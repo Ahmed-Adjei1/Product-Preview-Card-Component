@@ -1,0 +1,147 @@
+:root {
+  --primary-font: Fraunces, sans-serif;
+  --secondary-font: Montserrat sans-serif;
+
+  --background-color: hsl(30, 38%, 92%);
+  --main-background: hsl(0, 0%, 100%);
+
+  --heading-color: hsl(212, 21%, 14%);
+  --paragraph-color: hsl(228, 12%, 48%);
+  --price-color: hsl(158, 36%, 37%);
+  --button-hover-color: hsl(158, 42%, 18%);
+  --button-font-color: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: Fraunces;
+  src: url(./assets/fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: Montserrat;
+  margin: 0;
+  background-color: var(--background-color);
+}
+
+main {
+  width: calc(80vw - 2rem);
+  height: 100vh;
+  background-color: var(--main-background);
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-rows: 45vh 1fr;
+  gap: 1rem;
+}
+
+img {
+  width: calc(100% + 4rem);
+  margin: -2rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.desktop-view {
+    display: none;
+}
+
+h1 {
+  color: var(--paragraph-color);
+  font-size: 0.8em;
+  font-weight: lighter;
+  letter-spacing: 0.3rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-family: var(--primary-font);
+  font-weight: bolder;
+  font-size: 1.8em;
+}
+
+p {
+  color: var(--paragraph-color);
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 2.5rem;
+  margin: 1rem 0;
+}
+
+.current-price {
+  font-family: var(--primary-font);
+  color: var(--price-color);
+  font-weight: bolder;
+  font-size: 2em;
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+button {
+  display: flex;
+  background-color: var(--price-color);
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  border: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    transition: background-color 0.5s ease-in-out;
+}
+
+button > img {
+  width: 1rem;
+  height: 1rem;
+}
+
+button > p {
+  color: var(--button-font-color);
+  font-weight: bold;
+}
+
+@media (min-width: 376px) {
+    
+    main {
+        width: 35vw;
+        height: 50vh;
+    }
+
+    .grid_container {
+        grid-template-columns: 17.5vw 17.5vw;
+        grid-template-rows: 50vh;
+        gap: 0.5rem;
+    }
+
+    .mobile-view {
+        display: none;
+    }
+
+    .desktop-view {
+        display: block;
+        width: calc(100%);
+        height: calc(100% + 4rem);
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+}
